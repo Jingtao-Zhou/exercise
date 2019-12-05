@@ -18,10 +18,5 @@ pipeline {
                 echo 'Deploying'
             }
         }
-        stage('TestJenkins') {
-            steps {
-                echo 'test jenkins'
-            }
-        }
     }
 }
