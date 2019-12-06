@@ -3,19 +3,29 @@ pipeline {
         label 'Dev'
     }
     stages {
-        stage('Test') {
+        stage('Checkout') {
             steps {
-                echo 'Testing'
+               checkout scm
             }
         }
-        stage('Build') {
+        stage('Test') {
             steps {
-                echo 'Building'
+                sh "./gradlew clean test"
+            }
+        }
+        stage('Build package') {
+            steps {
+                sh "./gradlew clean build"
+            }
+        }
+        stage('Build image') {
+            steps {
+                sh "docker build -t exercise:latest ."
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying'
+                sh "./deploy.sh"
             }
         }
     }

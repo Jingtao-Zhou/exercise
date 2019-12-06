@@ -15,6 +15,7 @@ class EmployeeServiceTest {
 
 	@Test
 	void test() {
+        System.out.println("unit test");
 	}
 
 }
