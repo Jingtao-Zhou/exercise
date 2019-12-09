@@ -10,13 +10,13 @@ pipeline {
         }
         stage('Test') {
             steps {
-//                 sh "./gradlew clean test"
+                 sh "./gradlew clean test"
                 echo "test"
             }
         }
         stage('Build package') {
             steps {
-//                 sh "./gradlew clean build"
+                 sh "./gradlew clean build"
                 echo "build package"
             }
         }
@@ -31,20 +31,6 @@ pipeline {
 //                 sh "./deploy.sh"
                 echo "deploying"
             }
-        }
-        stage('Clean') {
-            steps {
-              cleanWs(
-                  cleanWhenAborted: true,
-                  cleanWhenFailure: true,
-                  cleanWhenNotBuilt: true,
-                  cleanWhenSuccess: true,
-                  cleanWhenUnstable: true,
-                  cleanupMatrixParent: true,
-                  disableDeferredWipeout: true,
-                  deleteDirs: true
-              )
-          	}
         }
     }
 }
