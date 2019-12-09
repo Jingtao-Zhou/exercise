@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
 //                 sh "./deploy.sh"
-                echo "deploy"
+                echo "deploying"
             }
         }
     }
