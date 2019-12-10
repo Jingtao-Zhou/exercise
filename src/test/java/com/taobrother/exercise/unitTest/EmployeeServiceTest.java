@@ -15,7 +15,7 @@ class EmployeeServiceTest {
 
 	@Test
 	void test() {
-        System.out.println("Unit test");
+        System.out.println("Unit Test");
 	}
 
 }
