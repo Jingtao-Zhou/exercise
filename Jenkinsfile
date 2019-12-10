@@ -8,31 +8,27 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-               checkout scm
+                checkout scm
             }
         }
         stage('Test') {
             steps {
-                 sh "./gradlew clean test"
-                echo "test"
+                sh "./gradlew clean test"
             }
         }
         stage('Build package') {
             steps {
-//                  sh "./gradlew clean build"
-                echo "build package"
+                sh "./gradlew clean build"
             }
         }
         stage('Build image') {
             steps {
-//                 sh "docker build -t exercise:latest ."
-                echo "build image"
+                sh "docker build -t exercise:latest ."
             }
         }
         stage('Deploy') {
             steps {
-//                 sh "./deploy.sh"
-                echo "deploying"
+                sh "./deploy.sh"
             }
         }
     }
