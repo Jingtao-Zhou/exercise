@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Build image') {
             steps {
-                sh "sudo docker build -t exercise:latest ."
+                sh "docker build -t exercise:latest ."
             }
         }
         stage('Deploy') {
