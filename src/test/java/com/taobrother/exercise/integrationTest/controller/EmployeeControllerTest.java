@@ -17,6 +17,6 @@ class EmployeeControllerTest {
 
     @Test
     void test() {
-        System.out.println("Integration test");
+        System.out.println("Integration Test");
     }
 }
