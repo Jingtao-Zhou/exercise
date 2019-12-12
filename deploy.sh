@@ -7,4 +7,4 @@ docker stop exercise || true
 docker rm exercise || true
 
 echo "run exercise"
-docker run --name exercise -p 8888:2333 --link mysql:db exercise:latest
+docker run --name exercise -p 8888:2333 --network=host exercise:latest
