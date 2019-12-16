@@ -22,4 +22,9 @@ public class EmployeeController {
         List<Employee> allEmployees = employeeService.getAllEmployees();
         return ResponseEntity.status(200).body(allEmployees);
     }
+
+    @GetMapping("/")
+    ResponseEntity testEndPoint(){
+        return ResponseEntity.status(200).body("test success");
+    }
 }
