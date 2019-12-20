@@ -7,4 +7,4 @@ docker stop exercise || true
 docker rm exercise || true
 
 echo "run exercise"
-docker run --name exercise -d --network=host exercise:latest
+docker run --name exercise -p 2333:8888 -d exercise:latest
