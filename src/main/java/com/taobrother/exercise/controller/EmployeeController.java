@@ -23,8 +23,13 @@ public class EmployeeController {
         return ResponseEntity.status(200).body(allEmployees);
     }
 
-    @GetMapping("/")
+    @GetMapping("/health")
     ResponseEntity testEndPoint(){
-        return ResponseEntity.status(200).body("test success");
+        return ResponseEntity.status(200).body("services is up");
+    }
+
+    @GetMapping("/api/admin")
+    ResponseEntity getAdmin(){
+        return ResponseEntity.status(200).body(employeeService.getEmployeeAdmin());
     }
 }
