@@ -1,11 +1,11 @@
-package com.taobrother.exercise.factory;
+package com.taobrother.exercise.config;
 
 import com.taobrother.exercise.entity.Employee;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class EmployeeFactory {
+public class EmployeeConfig {
 
     @Bean("employeeAdmin")
     public Employee getAdmin(){
