@@ -1,4 +1,4 @@
-package com.taobrother.exercise.controller;
+package com.taobrother.exercise.web;
 
 import com.taobrother.exercise.entity.Employee;
 import com.taobrother.exercise.service.EmployeeService;
