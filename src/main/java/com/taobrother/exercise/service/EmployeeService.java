@@ -30,4 +30,8 @@ public class EmployeeService {
     public Employee getEmployeeAdmin(){
         return employeeAdmin;
     }
+
+    public void createEmployee(String name) {
+        employeeRepository.save(new Employee(name));
+    }
 }
