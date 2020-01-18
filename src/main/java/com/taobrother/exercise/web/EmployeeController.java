@@ -30,7 +30,7 @@ public class EmployeeController {
 
     @GetMapping("/health")
     public ResponseEntity testEndPoint(){
-        return ResponseEntity.status(HttpStatus.OK).body("services is up");
+        return ResponseEntity.status(HttpStatus.OK).body("services are up");
     }
 
     @GetMapping("/api/admin")
