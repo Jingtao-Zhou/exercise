@@ -23,24 +23,24 @@ public class EmployeeController {
     }
 
     @GetMapping("/api/list")
-    ResponseEntity getAllEmployees(){
+    public ResponseEntity getAllEmployees(){
         List<Employee> allEmployees = employeeService.getAllEmployees();
         return ResponseEntity.status(HttpStatus.OK).body(allEmployees);
     }
 
     @GetMapping("/health")
-    ResponseEntity testEndPoint(){
+    public ResponseEntity testEndPoint(){
         return ResponseEntity.status(HttpStatus.OK).body("services is up");
     }
 
     @GetMapping("/api/admin")
-    ResponseEntity getAdmin(){
+    public ResponseEntity getAdmin(){
         return ResponseEntity.status(HttpStatus.OK).body(employeeService.getEmployeeAdmin());
     }
 
     @PostMapping("/api/sign_up")
     @VerifyName
-    ResponseEntity signUp(@RequestBody SignUpRequest request){
+    public ResponseEntity signUp(@RequestBody SignUpRequest request){
         employeeService.createEmployee(request.getName());
         return ResponseEntity.status(HttpStatus.OK).body("sign up success");
     }
