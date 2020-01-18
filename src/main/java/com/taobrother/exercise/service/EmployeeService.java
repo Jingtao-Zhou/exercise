@@ -2,6 +2,7 @@ package com.taobrother.exercise.service;
 
 import com.taobrother.exercise.entity.Employee;
 import com.taobrother.exercise.repository.EmployeeRepository;
+import com.taobrother.exercise.web.annotation.VerifyName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +32,7 @@ public class EmployeeService {
         return employeeAdmin;
     }
 
+    @VerifyName
     public void createEmployee(String name) {
         employeeRepository.save(new Employee(name));
     }

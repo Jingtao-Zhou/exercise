@@ -39,7 +39,6 @@ public class EmployeeController {
     }
 
     @PostMapping("/api/sign_up")
-    @VerifyName
     public ResponseEntity signUp(@RequestBody SignUpRequest request){
         employeeService.createEmployee(request.getName());
         return ResponseEntity.status(HttpStatus.OK).body("sign up success");
