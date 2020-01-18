@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Build package') {
             steps {
-                sh "./gradlew clean build"
+                sh "./gradlew clean build -x test"
             }
         }
         stage('Build image') {
