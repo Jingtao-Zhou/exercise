@@ -23,7 +23,6 @@ pipeline {
         }
         stage('Build image') {
             steps {
-                sh "docker rmi exercise:latest ."
                 sh "docker build -t exercise:latest ."
             }
         }
