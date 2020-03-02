@@ -3,7 +3,8 @@ FROM openjdk:8u151-jdk-slim
 COPY ./build/libs/*.jar /app/
 COPY ./run.sh /app/
 
-USER 1001
+RUN usermod -u 1000 campaign-admin
+RUN usermod -G staff campaign-admin
 
 EXPOSE 8888
 
