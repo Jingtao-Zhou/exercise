@@ -3,8 +3,7 @@ FROM openjdk:8u151-jdk-slim
 COPY ./build/libs/*.jar /app/
 COPY ./run.sh /app/
 
-RUN useradd --create-home --no-log-init --shell /bin/bash campaign-admin
-USER campaign-admin
+USER 1001
 
 EXPOSE 8888
 
