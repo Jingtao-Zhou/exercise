@@ -1,9 +1,8 @@
 FROM openjdk:8u151-jdk-slim
 
 RUN useradd campaign-admin
-RUN usermod -u 1000 campaign-admin
-RUN usermod -G staff campaign-admin
-USER campaign-admin
+RUN mkdir -p /data/image
+RUN chown campaign-admin:campaign-admin /data/image
 
 COPY ./build/libs/*.jar /app/
 COPY ./run.sh /app/
