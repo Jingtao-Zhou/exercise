@@ -5,6 +5,7 @@ COPY ./run.sh /app/
 
 RUN useradd campaign-admin
 RUN usermod -G staff campaign-admin
+USER campaign-admin
 
 EXPOSE 8888
 
