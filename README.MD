@@ -1,3 +1,4 @@
+# 阿里云中了```webchain-miner```, 暂停更新一段时间（涉及到jenkins的重新搭建以及环境的重新配置）
 # Jingtao's practice project
 
 ## Framework
